@@ -1,0 +1,14 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "description": "this is namaste react by yash",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
