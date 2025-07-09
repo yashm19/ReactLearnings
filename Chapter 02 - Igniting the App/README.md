@@ -13,3 +13,6 @@
 - Better Error Handling
 - HTTPS Hosting
 - Tree Shaking Algoritm (remove unused code)
+
+# Broswerslist
+- Package to make app compatible towards to other versions of browser
