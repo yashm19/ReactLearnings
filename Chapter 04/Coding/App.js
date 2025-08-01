@@ -1,0 +1,148 @@
+//React.createElement is a JS Object
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+/**
+ * Header
+  - Logo
+  - Nav Items
+ * Footer
+    - Copyright
+    - Contact Us
+ * Body
+   - Search
+   - RestaurantList
+      * RestaurantCard
+ */
+
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          src="data:image/png;base64,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"
+          alt="logo"
+        ></img>
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const RestaurantCard = ({ resData }) => {
+  const { name, receipe, deliveryTime, price, image } = resData;
+  return (
+    <div className="restaurant-card">
+      <img className="restaurant-logo" src={image} alt="restaurant-logo"></img>
+      <h3>{name}</h3>
+      <h4>{receipe}</h4>
+      <h4>{deliveryTime}</h4>
+      <h4>{price}</h4>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search-container">Search</div>
+      <div className="restaurant-list">
+        {sampleRestaurantData.map((restaurant) => (
+          <RestaurantCard key={restaurant.id} resData={restaurant} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
+
+const sampleRestaurantData = [
+  {
+    id: "1001",
+    name: "Santosh Family Dhaba",
+    receipe: "Tomato Soup",
+    rating: "4.0",
+    price: "₹300 for two",
+    deliveryTime: "22 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/mkcibe6x1ychvzjkywxk",
+  },
+  {
+    id: "1002",
+    name: "Cafe Niloufer",
+    receipe: "Maska Bun",
+    rating: "4.5",
+    price: "₹400 for two",
+    deliveryTime: "32 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/dc9t0kiq7lhsd3pndohf",
+  },
+  {
+    id: "1003",
+    name: "Santosh Family Dhaba",
+    receipe: "Crispy Corn",
+    rating: "4.5",
+    price: "₹560 for two",
+    deliveryTime: "32 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/dwqb8nhiop8fvqya0alq",
+  },
+  {
+    id: "1004",
+    name: "Grameen Kulfi",
+    receipe: "Sitaphal Stick Kulfi",
+    rating: "4.6",
+    price: "₹120 for two",
+    deliveryTime: "18 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/vu0thsifji9wgfuzfmic",
+  },
+  {
+    id: "1005",
+    name: "Nrs Nandini",
+    receipe: "Idli",
+    rating: "4.4",
+    price: "₹150 for two",
+    deliveryTime: "21 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/9fa5ca30c3db622c69cec0326ff63b41",
+  },
+  {
+    id: "1006",
+    name: "Utsav Vegetarian",
+    receipe: "Kaju Paneer Biryani",
+    rating: "4.1",
+    price: "₹300 for two",
+    deliveryTime: "32 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/y2lkcxxax3794vepe2se",
+  },
+  {
+    id: "1007",
+    name: "Subbayya Gari Hotel",
+    receipe: "Butta Bojanam",
+    rating: "4.0",
+    price: "₹300 for two",
+    deliveryTime: "24 MINS",
+    image:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/iwtocxqjtu57vc7l52h9",
+  },
+];
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
