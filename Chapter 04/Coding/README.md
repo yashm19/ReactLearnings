@@ -14,3 +14,11 @@ const jsxHeading = (
 //Parser will convert this JSX into React.createElement calls under the hood.
 //Babel is a tool that converts JSX into JavaScript code that React can understand.
 //Parser contains babel which is a tool that converts JSX into React.createElement calls.
+
+Important Hooks
+Inbuilt js utility functions
+
+- useState -- useful for creating state varaibles
+- useEffect
+
+Reconcilation Algorithm
