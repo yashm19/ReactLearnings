@@ -22,3 +22,26 @@ Inbuilt js utility functions
 - useEffect
 
 Reconcilation Algorithm
+
+# Use Effect hook
+
+- if no dependency array then useffect is called on every component render
+- if we have dependency array the behavior changes
+
+Case 1 - Empty dependency array, only initial render useeffect is called, even if the component is rerendered
+Case 2 - If there is depnedency , then useeffect will be called on dependency array change
+
+# Router
+
+react-router-dom npm package
+
+Use App.js to create configuration for routing.
+
+- CreateBrowserRouter will create a path list
+- Outlet will provide a tunnel to apply the routes
+- RouterProvider to provide the path config to root element
+
+# Two Types of routing in web apps
+
+- Client side routing -- Just loading the specific component or changing the component
+- server side routing -- traditional way to reloading the page by making a network call.
