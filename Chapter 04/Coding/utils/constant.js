@@ -1,3 +1,3 @@
 export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
 export const SWIGGY_API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.59884531236387&lng=73.7925515652969&page_type=DESKTOP_WEB_LISTING"
-export const SWIGGY_MENU_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.59884531236387&lng=73.7925515652969&&submitAction=ENTER&restaurantId=";
+export const SWIGGY_MENU_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.59884531236387&lng=73.7925515652969&restaurantId=";

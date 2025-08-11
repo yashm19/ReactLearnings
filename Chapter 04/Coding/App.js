@@ -5,7 +5,7 @@ import Body from "./Components/Body";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
-import RestaurantMenu from "./Components/restaurantMenu";
+import RestaurantMenu from "./Components/RestaurantMenu";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 /**
  * Header
@@ -25,7 +25,7 @@ const AppLayout = () => {
     <div className="app">
       <Header />
       {/* <Body /> */}
-      <Outlet />
+      <Outlet /> {/* This is where the child components will be rendered */}
     </div>
   );
 };
@@ -57,4 +57,5 @@ const appRouter = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+root.render(<RouterProvider router={appRouter} />); // This is how we render the app with the router
+// ReactDOM.render(<AppLayout />, document.getElementById("root")); // This is how we render the app without the router
